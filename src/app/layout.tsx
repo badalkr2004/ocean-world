@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inria_Sans, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const inraiSans = Inria_Sans({
+  subsets: ["latin"],
+  variable: "--font-inria-sans",
+  weight: ["300", "400", "700"],
+  style: ["italic", "normal"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const josefinSans = Josefin_Sans({
+  subsets: ["latin"],
+  variable: "--font-josefin-sans",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  style: ["italic", "normal"],
 });
 
 export const metadata: Metadata = {
@@ -26,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inraiSans.variable} ${josefinSans.variable}  antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
