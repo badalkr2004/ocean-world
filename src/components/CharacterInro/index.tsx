@@ -70,7 +70,7 @@ const CharacterSection = ({
           </>
         )}
       </div>
-      <div className="absolute inset-0 opacity-0 transition-opacity duration-300 opacity-20 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 " />
+      <div className="absolute inset-0 opacity-20 transition-opacity duration-300 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 " />
     </motion.div>
   );
 };
