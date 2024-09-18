@@ -158,7 +158,7 @@ function Hero() {
             </a>
           </motion.div>
         </div>
-        <div className="order-1 lg:order-2  shrink grow overflow-hidden z-50">
+        <div className="order-1  lg:order-2  shrink grow overflow-hidden ">
           <motion.div
             initial={{ opacity: 0, x: -300 }}
             animate={{ opacity: 1, x: 0 }}

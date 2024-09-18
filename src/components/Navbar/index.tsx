@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { ChevronRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const NavLink = ({
@@ -85,7 +85,7 @@ export default function Navbar() {
       >
         {/* Sidebar */}
         <div
-          className={`absolute top-14 right-0 w-full h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
+          className={`absolute   right-0 w-full h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -100,26 +100,45 @@ export default function Navbar() {
 
             <div
               id="sideNav"
-              className="fixed inset-0 bg-gradient-to-b from-blue-700 to-teal-900 transform  transition-transform duration-300 ease-in-out z-40"
+              className="fixed inset-0  transform  transition-transform duration-300 ease-in-out z-40"
             >
-              <nav className="flex flex-col h-full space-y-0 ">
-                <div className="block w-3/4 p-4    text-blue-900 text-xl font-bold transition-transform hover:scale-105 hover:shadow-ocean hover:bg-blue-300">
-                  <NavLink href="/home">🌊 Home</NavLink>
-                </div>
-                <div className="block w-3/4 p-4    text-blue-900 text-xl font-bold transition-transform hover:scale-105 hover:shadow-ocean hover:bg-blue-300">
-                  <NavLink href="/about">🐠 About Us</NavLink>
+              <nav className="flex flex-col justify-between h-full space-y-0 mt-10 ">
+                <div className="mobile_top">
+                  <ul className="p-8 flex flex-col space-y-4">
+                    <li className="flex justify-between text-3xl font-bold">
+                      <Link href="#">Our games</Link>
+                      <ChevronRight className="text-3xl font-semibold" />
+                    </li>
+                    <li className="flex justify-between text-3xl font-bold">
+                      <Link href="#">Our Story</Link>
+                      <ChevronRight className="text-3xl font-semibold" />
+                    </li>
+                    <li className="flex justify-between text-3xl font-bold text-orange-500">
+                      <Link href="#">We're Hiring</Link>
+                      <ChevronRight className="text-3xl font-semibold" />
+                    </li>
+                  </ul>
+                  <hr className="w-1/4 ml-8 h-[2px] font-bold border-t-0 bg-transparent bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-75 dark:via-neutral-400" />
+                  <ul className="p-8 flex flex-col space-y-4">
+                    <li className="flex justify-between text-xl font-bold">
+                      <Link href="/">Home</Link>
+                      <ChevronRight className="text-3xl font-semibold" />
+                    </li>
+                    <li className="flex justify-between text-xl font-bold">
+                      <Link href="#">About</Link>
+                      <ChevronRight className="text-3xl font-semibold" />
+                    </li>
+                    <li className="flex justify-between text-xl font-bold">
+                      <Link href="#">Contact us</Link>
+                      <ChevronRight className="text-3xl font-semibold" />
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="block w-3/4 p-4    text-blue-900 text-xl font-bold transition-transform hover:scale-105 hover:shadow-ocean hover:bg-blue-300">
-                  <NavLink href="/services">🐋 Services</NavLink>
-                </div>
-
-                <div className="block w-3/4 p-4    text-blue-900 text-xl font-bold transition-transform hover:scale-105 hover:shadow-ocean hover:bg-blue-300">
-                  <NavLink href="/explore">🏝️ Explore</NavLink>
-                </div>
-
-                <div className="block w-3/4 p-4    text-blue-900 text-xl font-bold transition-transform hover:scale-105 hover:shadow-ocean hover:bg-blue-300">
-                  <NavLink href="/contact">⚓ Contact</NavLink>
+                <div className="mobile_bottom p-20">
+                  <p className="text-center font-bold">
+                    Made by Team Bit Brains
+                  </p>
                 </div>
               </nav>
             </div>
