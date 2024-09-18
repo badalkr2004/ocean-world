@@ -102,7 +102,7 @@ export default function Navbar() {
               id="sideNav"
               className="fixed inset-0  transform  transition-transform duration-300 ease-in-out z-40"
             >
-              <nav className="flex flex-col justify-between h-full space-y-0 mt-10 ">
+              <nav className="flex flex-col text-black justify-between h-full space-y-0 mt-10 ">
                 <div className="mobile_top">
                   <ul className="p-8 flex flex-col space-y-4">
                     <li className="flex justify-between text-3xl font-bold">
@@ -118,7 +118,7 @@ export default function Navbar() {
                       <ChevronRight className="text-3xl font-semibold" />
                     </li>
                   </ul>
-                  <hr className="w-1/4 ml-8 h-[2px] font-bold border-t-0 bg-transparent bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-75 dark:via-neutral-400" />
+                  <hr className="w-1/4 ml-8 h-[2px] font-bold border-t-0 bg-transparent bg-gradient-to-r from-transparent via-orange-500 to-transparent opacity-75 " />
                   <ul className="p-8 flex flex-col space-y-4">
                     <li className="flex justify-between text-xl font-bold">
                       <Link href="/">Home</Link>
