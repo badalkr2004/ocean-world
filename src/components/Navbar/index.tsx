@@ -114,7 +114,7 @@ export default function Navbar() {
                       <ChevronRight className="text-3xl font-semibold" />
                     </li>
                     <li className="flex justify-between text-3xl font-bold text-orange-500">
-                      <Link href="#">We're Hiring</Link>
+                      <Link href="#">We&apos;re Hiring</Link>
                       <ChevronRight className="text-3xl font-semibold" />
                     </li>
                   </ul>
